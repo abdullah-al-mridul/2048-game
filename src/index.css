@@ -1,0 +1,128 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap");
+
+* {
+  text-decoration: none;
+  user-select: none;
+}
+.game-container {
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  padding: 20px;
+}
+body {
+  background-color: #0f172a;
+}
+.game-board {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  border-radius: 6px;
+  padding: 20px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.row {
+  display: flex;
+}
+
+.tile {
+  width: 80px;
+  height: 80px;
+  border-radius: 6px;
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #776e65;
+  background-color: #cdc1b4;
+}
+
+.tile-0 {
+  background-color: #cdc1b4;
+  color: transparent; /* Hide text for empty tiles */
+}
+
+.tile-2 {
+  background-color: #eee4da;
+}
+
+.tile-4 {
+  background-color: #ede0c8;
+}
+
+.tile-8 {
+  background-color: #f2b179;
+}
+
+.tile-16 {
+  background-color: #f59563;
+}
+
+.tile-32 {
+  background-color: #f67c5f;
+}
+
+.tile-64 {
+  background-color: #f65e3b;
+}
+
+.tile-128 {
+  background-color: #edcf72;
+}
+
+.tile-256 {
+  background-color: #edcc61;
+}
+
+.tile-512 {
+  background-color: #edc850;
+}
+
+.tile-1024 {
+  background-color: #edc53f;
+}
+
+.tile-2048 {
+  background-color: #edc22e;
+}
+
+.disco-effect {
+  animation: disco 1s infinite;
+}
+
+@keyframes disco {
+  0% {
+    color: #ff0080;
+  }
+  25% {
+    color: #8000ff;
+  }
+  50% {
+    color: #00ff80;
+  }
+  75% {
+    color: #00bfff;
+  }
+  100% {
+    color: #ff8000;
+  }
+}
+@media screen and (max-width: 500px) {
+  .game-board {
+    display: flex;
+    margin-top: 10px;
+    border-radius: 4px;
+    padding: 10px;
+  }
+  .tile {
+    width: 50px;
+    height: 50px;
+  }
+}
